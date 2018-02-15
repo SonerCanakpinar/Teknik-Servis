@@ -1,0 +1,52 @@
+﻿
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">ÖZBEY Teknik Servis</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-wrench"></i>
+                    <span class="nav-link-text">Arızalar</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                    <li>
+                        <a href="@Url.Action("YonlendirilmemisArizalar", "Admin", new { Area = "ServisYonetim" })">Yönlendirilmemiş Arızalar</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("YonlendirilmisArizalar", "Admin", new { Area = "ServisYonetim" })">Arızaları Listele</a>
+
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-sitemap"></i>
+                    <span class="nav-link-text">Kullanıcılar</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti">
+                    <li>
+                        <a href="@Url.Action("KullanicilariListele", "Admin", new { Area = "ServisYonetim" })">Listele</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("KullaniciEkle", "Admin", new { Area = "ServisYonetim" })">Ekle</a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <li><i class="fa fa-sign-out"></i><a href="/Account/Logout">ÇIKIŞ YAP</a></li>
+        </ul>
+    </div>
+</nav>
